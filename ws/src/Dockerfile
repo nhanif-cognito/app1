@@ -1,6 +1,10 @@
 podTemplate(label: 'mypod', containers: [
     containerTemplate(name: 'git', image: 'alpine/git', ttyEnabled: true, command: 'cat')
-	]
+	],
+  volumes: [
+    hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),
+  ]
+  ) {
 	node('mypod') {
 			stage('update') {
 					container('docker') {
@@ -20,5 +24,6 @@ podTemplate(label: 'mypod', containers: [
 //  Bundle app source
 // COPY . /src
 
-EXPOSE  8080
-CMD ["node", "/src/index.js"]
+    EXPOSE  8080
+    CMD ["node", "/src/index.js"]
+}
