@@ -10,7 +10,7 @@ podTemplate(label: 'mypod', containers: [
 					container('docker') {
 							RUN apk add --update nodejs
               COPY package.json /src/package.json
-              RUN cd /src; npm install
+              npm install
               COPY . /src
 					}
 			}
