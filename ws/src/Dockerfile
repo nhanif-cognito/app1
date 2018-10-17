@@ -1,5 +1,6 @@
-FROM alpine:3.1
-
+podTemplate(label: 'mypod', containers: [
+    containerTemplate(name: 'git', image: 'alpine/git', ttyEnabled: true, command: 'cat')
+	]
 # Update
 RUN apk add --update nodejs
 
