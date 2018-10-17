@@ -26,4 +26,5 @@ podTemplate(label: 'mypod', containers: [
 
     EXPOSE  8080
     CMD ["node", "/src/index.js"]
+  }
 }
