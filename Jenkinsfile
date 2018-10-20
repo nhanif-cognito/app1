@@ -5,7 +5,7 @@ node {
     }
     stage('Build image') {
 
-        app = docker.build("nhanif/hw")
+        app = docker.build("node:7-onbuild")
     }
     stage('Test image') {
         app.inside {
