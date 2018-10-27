@@ -1,4 +1,4 @@
-To deploy a basic hello world application using on HTTP server follow steps below
+To deploy a basic hello world application on HTTP server follow steps below
 1.Create a simple python file index.py using flask and also specify HTTP server ip and port init.
 2.Create a Dockerfile containing 
   1. python base image source
