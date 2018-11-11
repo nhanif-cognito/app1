@@ -2,7 +2,7 @@
 pipeline {
 	  agent { dockerfile true }
 		options {
-        ansiColor('xterm')
+      //  ansiColor('xterm')
         timestamps()
         buildDiscarder(logRotator(numToKeepStr:'50'))
     }
